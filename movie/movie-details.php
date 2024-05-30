@@ -10,6 +10,7 @@
                     {
                         while($row = mysqli_fetch_assoc($result)) 
                         {
+                            $id = $row["id"];
                             $movie_title = $row["Tenphim"];
                             $movie = $row["Movie"];
                             $movie_image = $row["poster"];
@@ -23,11 +24,12 @@
                             $category = $row["Theloai"];
                             $update_date = $row["ngay_cap_nhat"];
                             $views = $row["luot_xem"];
+                            $noi_dung = $row["noi_dung"];
                         }
                     }
                     else
                     {
-                        echo"Khong tim thay phim";
+                        echo"Không tìm thấy phim";
                     }
                 ?>
                 <h3>Trang chủ/ <?= $movie_title ?></h3>
@@ -36,7 +38,7 @@
                         <img src="<?= $movie_image ?>" alt="Hinh anh phim">
                         <ul class="button-list-movie">
                             <li class="bl1-movie"><a href="#">Trailer</a></li>
-                            <li class="bl2-movie"><a href="./TrangXemPhim.html">Xem phim</a></li>
+                            <li class="bl2-movie"><a href="watch-movie.php?xem='$id'">Xem phim</a></li>
                         </ul>
                     </div>
                     <div class="dRight-movie">
@@ -56,7 +58,7 @@
                 </div>
                 <div class="cFilm-movie">
                     <h4>Nội Dung Phim</h4>
-                    <p>Nội dung giới thiệu phim</p>
+                    <p><?= $noi_dung ?></p>
                 </div>
                 <div class="comment-movie">
                     <h4>Bình luận</h4>

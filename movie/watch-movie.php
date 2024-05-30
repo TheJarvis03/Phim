@@ -1,27 +1,34 @@
 <?php include('../layout/header.php') ?>
 <?php include('../layout/menu.php') ?>
             <?php
+                if (isset($_GET['xem'])) 
+                {
+                    $id = $_GET['xem'];
+                } 
+                else 
+                {
+                    $id = '';
+                }
                 $sql = "SELECT * FROM phim, content WHERE phim.id = content.stt";
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) 
                 {
-                    while($row = mysqli_fetch_assoc($result)) 
+                    while($row = mysqli_fetch_assoc($result))
                     {
                         $movie_title = $row["Tenphim"];
                         $category = $row["Theloai"];
+                        $video = $row["video"];
                     }
                 }
                 else
                 {
-                    echo"Khong tim thay phim";
+                    echo"Không tìm thấy phim";
                 }
             ?>
             <div id="content-watch">
                 <h3>Trang chủ/ <?= $movie_title ?></h3>
                 <div class="view-watch">
-                    <video class="player-watch" playsinline controls poster="./data/Poster.jpg">
-                        <source src="./data/View.mp4" type="video/mp4">
-                    </video> 
+                    <iframe src="$video" frameborder="0"></iframe>
                 </div>
                 <div class="comment-movie">
                     <h4>Bình luận</h4>
