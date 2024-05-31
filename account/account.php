@@ -1,7 +1,29 @@
 <?php include('../layout/header.php') ?>
 <?php include('../layout/menu.php') ?>
 
-        
+        <?php
+            if (isset($_SESSION['email'])){
+                $s_email = $_SESSION['email'];
+                // nếu có session email thì lấy thông tin người dùng
+                $get_thong_tin = "SELECT * FROM tai_khoan WHERE email='$s_email'" ;
+                $kq_get_thong_tin = mysqli_query($conn, $get_thong_tin);
+                if (mysqli_num_rows($kq_get_thong_tin) > 0){
+                    while ($row = mysqli_fetch_assoc($kq_get_thong_tin)) {
+                        $ho_ten = $row["ho_ten"];
+                        $sdt = $row["sdt"];
+                        $ngay_sinh = $row["ngay_sinh"];
+                        $email = $s_email;
+                        $dia_chi = $row["dia_chi"];
+                    }
+                }else{
+                    // nếu không có tài khoản thì ra trang đăng ký
+                    header("location:../login-register/trang_dang_ky_dang_nhap.php");
+                }
+            }else{
+                // nếu không có session email thì quay lại trang đăng nhập 
+                header("location:../login-register/trang_dang_ky_dang_nhap.php");
+            }
+        ?>
 
         <div id="content">
             <div class="content1">

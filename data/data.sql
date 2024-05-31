@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `content` (
   `Namsx` float DEFAULT NULL,
   `poster` varchar(255) NOT NULL,
   PRIMARY KEY (`STT`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `content`
@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `phim` (
   `video` varchar(255) DEFAULT NULL,
   `noi_dung` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `phim`
