@@ -1,6 +1,6 @@
             <div id="footer">
                 <div class="lFooter">
-                    <p><img src="../img/Logo.jpg" alt="Logo"></p>
+                    <p><a href="../index.php"><img src="../img/Logo.jpg" alt="Logo"></a></p>
                     <p>PhimDauTay - Nơi giải trí phù hợp cho mọi lứa tuổi </p>
                     <p>(c) PhimDauTay</p>
                 </div>

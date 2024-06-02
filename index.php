@@ -12,7 +12,7 @@
     <body>
         <div id="menu">
             <div class="mLeft">
-                <h1><img src="img/Logo.jpg" alt="Logo"/></h1>
+                <h1><a href="index.php"><img src="img/Logo.jpg" alt="Logo"></a></h1>
             </div>
             <label for="search-input" class="searchBox">
                 <input type="text" placeholder="Search here..." id="search-input"/>
@@ -127,7 +127,7 @@
             <h3>PHIM HOẠT HÌNH</h3>
             <div class="tphim4">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Quocgia='Hàn Quốc' OR Theloai='Hoạt hình, Hành động, Hài hước' LIMIT 6";
+                    $sql = "SELECT * FROM content WHERE Quocgia='Mỹ' OR Theloai='Hoạt hình' LIMIT 6";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
@@ -171,7 +171,7 @@
         <div id="sidebar">
             <h3>PHIM HOT</h3>
             <?php
-                    $sql = "SELECT * FROM content LIMIT 12";
+                    $sql = "SELECT * FROM content LIMIT 11";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
@@ -182,7 +182,7 @@
                             $recommend_poster = $row["poster"];
                             $recommend_phim = $row["Tenphim"];
                             $recommend_movie = $row["Movie"];
-                            echo "<li><a href='./movie/movie-details.php?$id'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
+                            echo "<li><a href='./movie/movie-details.php?id=$id'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
                         }
                            echo "</ul>";
                     }
@@ -192,7 +192,7 @@
 
         <div id="footer">
             <div class="lFooter">
-                <p><img src="img/Logo.jpg" alt="Logo"></p>
+                <p><a href="index.php"><img src="img/Logo.jpg" alt="Logo"></a></p>
                 <p>PhimDauTay - Nơi giải trí phù hợp cho mọi lứa tuổi </p>
                 <p>(c) PhimDauTay</p>
             </div>
