@@ -12,10 +12,7 @@
     margin-left: 10px;
     width: 150px;
     word-wrap: break-word;
-<<<<<<< HEAD
     padding: 10px;
-=======
->>>>>>> a2f7d090a9f34baf23841687d3d230017443cf81
 }
 .tphim1 a{
     color: #ff9249;
@@ -37,10 +34,7 @@
     margin-left: 10px;
     width: 150px;
     word-wrap: break-word;
-<<<<<<< HEAD
     padding: 10px;
-=======
->>>>>>> a2f7d090a9f34baf23841687d3d230017443cf81
 }
 .tphim2 a{
     color: #ff9249;
@@ -62,10 +56,7 @@
     margin-left: 10px;
     width: 150px;
     word-wrap: break-word;
-<<<<<<< HEAD
     padding: 10px;
-=======
->>>>>>> a2f7d090a9f34baf23841687d3d230017443cf81
 }
 .tphim3 a{
     color: #ff9249;
@@ -87,7 +78,6 @@
     margin-left: 10px;
     width: 150px;
     word-wrap: break-word;
-<<<<<<< HEAD
     padding: 10px;
 }
 .tphim4 a{
@@ -95,8 +85,6 @@
 }
 .tphim4 p{
     color: white;
-=======
->>>>>>> a2f7d090a9f34baf23841687d3d230017443cf81
 }
 
 .tphim5 ul {
@@ -112,10 +100,7 @@
     margin-left: 10px;
     width: 150px;
     word-wrap: break-word;
-<<<<<<< HEAD
     padding: 10px;
-=======
->>>>>>> a2f7d090a9f34baf23841687d3d230017443cf81
 }
 .tphim5 a{
     color: #ff9249;
@@ -131,7 +116,7 @@
     border: 1px solid #a3a2a3;
 }
 #content h3{
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 20px;
 }
 
@@ -161,10 +146,6 @@
 }
 #sidebar p, #sidebar a{
     margin-top: 35px;
-<<<<<<< HEAD
-    
-=======
->>>>>>> a2f7d090a9f34baf23841687d3d230017443cf81
 }
 #sidebar p{
     font-size: 14px;
