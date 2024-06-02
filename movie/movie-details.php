@@ -4,7 +4,8 @@
 
             <div id="content-movie">
                 <?php
-                    $sql = "SELECT * FROM phim, content WHERE phim.id = content.stt";
+                    $id = $_GET['id'];
+                    $sql = "SELECT * FROM phim, content WHERE phim.id = content.stt AND content.stt = $id";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
@@ -37,8 +38,10 @@
                     <div class="dLeft-movie">
                         <img src="<?= $movie_image ?>" alt="Hinh anh phim">
                         <ul class="button-list-movie">
-                            <li class="bl1-movie"><a href="#">Trailer</a></li>
-                            <li class="bl2-movie"><a href="watch-movie.php?xem='$id'">Xem phim</a></li>
+                            <li><a href="#">Trailer</a></li>
+                            <?php
+                                echo "<li><a href='watch-movie.php?id=$id'>Xem phim</a></li>";
+                            ?>
                         </ul>
                     </div>
                     <div class="dRight-movie">
@@ -70,7 +73,7 @@
 
                 <div class="recommend-movie">
                     <?php
-                        $sql = "SELECT * FROM content WHERE Theloai = '$category' LIMIT 4";
+                        $sql = "SELECT * FROM content WHERE Theloai = '$category' LIMIT 5";
                         $result = mysqli_query($conn, $sql);
                         if (mysqli_num_rows($result) > 0) 
                         {
@@ -79,11 +82,12 @@
 
                             while($row = mysqli_fetch_assoc($result)) 
                             {
+                                $id = $row["STT"];
                                 $recommend_poster = $row["poster"];
                                 $recommend_phim = $row["Tenphim"];
                                 $recommend_movie = $row["Movie"];
 
-                                echo "<li><a href='#'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
+                                echo "<li><a href='movie-details.php?id=$id'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
                             }
                                echo "</ul>";
                         }
@@ -102,11 +106,12 @@
 
                         while($row = mysqli_fetch_assoc($result)) 
                         {
-                            $recommend_poster = $row["poster"];
-                            $recommend_phim = $row["Tenphim"];
-                            $recommend_movie = $row["Movie"];
+                            $id = $row["STT"];
+                            $sidebar_poster = $row["poster"];
+                            $sidebar_phim = $row["Tenphim"];
+                            $sidebar_movie = $row["Movie"];
 
-                            echo "<li><a href='#'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
+                            echo "<li><a href='movie-details.php?id=$id'><img src='$sidebar_poster'><p>$sidebar_movie</p>$sidebar_phim</a></li>";
                         }
                         echo "</ul>";
                     }

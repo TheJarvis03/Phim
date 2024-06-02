@@ -7,10 +7,11 @@
   border: 1px solid black;
   width: 150px;
   height: 200px;
-  margin-left: 10px;
 }
-.tphim1 p{
-  margin-left: 50px;
+.tphim1 li{
+  margin-left: 10px;
+  width: 150px;
+  word-wrap: break-word;
 }
 .tphim2 ul {
   display: flex;
@@ -20,10 +21,11 @@
   border: 1px solid black;
   width: 150px;
   height: 200px;
-  margin-left: 10px;
 }
-.tphim2 p{
-  margin-left: 30px;
+.tphim2 li{
+  margin-left: 10px;
+  width: 150px;
+  word-wrap: break-word;
 }
 .tphim3 ul {
   display: flex;
@@ -33,10 +35,11 @@
   border: 1px solid black;
   width: 150px;
   height: 200px;
-  margin-left: 10px;
 }
-.tphim3 p{
-  margin-left: 30px;
+.tphim3 li{
+  margin-left: 10px;
+  width: 150px;
+  word-wrap: break-word;
 }
 .tphim4 ul {
   display: flex;
@@ -46,10 +49,11 @@
   border: 1px solid black;
   width: 150px;
   height: 200px;
-  margin-left: 10px;
 }
-.tphim4 p{
-  margin-left: 30px;
+.tphim4 li{
+  margin-left: 10px;
+  width: 150px;
+  word-wrap: break-word;
 }
 
 .tphim5 ul {
@@ -60,10 +64,11 @@
   border: 1px solid black;
   width: 150px;
   height: 200px;
-  margin-left: 10px;
 }
-.tphim5 p{
-  margin-left: 30px;
+.tphim5 li{
+  margin-left: 10px;
+  width: 150px;
+  word-wrap: break-word;
 }
 #content{
   background-color: #333;

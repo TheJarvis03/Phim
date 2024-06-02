@@ -22,33 +22,33 @@
             </label>
             <div class="mRight">
                 <ul>
-                    <li class=""><a href="#">Phim lẻ</a></li>
-                    <li><a href="#">Phim bộ</a></li>
+                    <li><a href="./category/category.php?xem=phimle">Phim lẻ</a></li>
+                    <li><a href="./category/category.php?xem=phimbo">Phim bộ</a></li>
                     <li><a href="#">Thể loại</a>
                         <ul class="mType">
                             <li>
                                 <div class="subMenu">
                                     <ul>
-                                        <li><a href="#">Phim kinh dị</a></li>
-                                        <li><a href="#">Phim hành động</a></li>
-                                        <li><a href="#">Phim hoạt hình</a></li>
-                                        <li><a href="#">Phim hài</a></li>
-                                        <li><a href="#">Phim lãng mạn</a></li> 
-                                        <li><a href="#">Phim cổ trang</a></li>
-                                        <li><a href="#">Phim gia đình</a></li>
+                                        <li><a href="./category/category.php?xem=kinhdi">Phim kinh dị</a></li>
+                                        <li><a href="./category/category.php?xem=hanhdong">Phim hành động</a></li>
+                                        <li><a href="./category/category.php?xem=hoathinh">Phim hoạt hình</a></li>
+                                        <li><a href="./category/category.php?xem=hai">Phim hài</a></li>
+                                        <li><a href="./category/category.php?xem=langman">Phim lãng mạn</a></li> 
+                                        <li><a href="./category/category.php?xem=cotrang">Phim cổ trang</a></li>
+                                        <li><a href="./category/category.php?xem=giadinh">Phim gia đình</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
                                 <div class="subMenu">
                                     <ul>
-                                        <li><a href="#">Phim chiến trang</a></li>
-                                        <li><a href="#">Phim chính kịch</a></li>
-                                        <li><a href="#">Phim viễn tưởng</a></li>
-                                        <li><a href="#">Phim tâm lý</a></li>
-                                        <li><a href="#">Phim hình sự</a></li>
-                                        <li><a href="#">Phim phiêu lưu</a></li>
-                                        <li><a href="#">Phim khoa học</a></li>
+                                        <li><a href="./category/category.php?xem=chientranh">Phim chiến tranh</a></li>
+                                        <li><a href="./category/category.php?xem=chinhkich">Phim chính kịch</a></li>
+                                        <li><a href="./category/category.php?xem=vientuong">Phim viễn tưởng</a></li>
+                                        <li><a href="./category/category.php?xem=tamly">Phim tâm lý</a></li>
+                                        <li><a href="./category/category.php?xem=hinhsu">Phim hình sự</a></li>
+                                        <li><a href="./category/category.php?xem=phieuluu">Phim phiêu lưu</a></li>
+                                        <li><a href="./category/category.php?xem=khoahoc">Phim khoa học</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -64,117 +64,129 @@
             <h3>PHIM NỔI BẬT</h3>
             <div class="tphim1">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Quocgia = 'Hàn Quốc' LIMIT 6";
+                    $sql = "SELECT * FROM content WHERE Quocgia = 'Hàn Quốc' OR Quocgia = 'Mỹ' LIMIT 6";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
                         echo "<ul>";
                         while($row = mysqli_fetch_assoc($result)) 
                         {
+                            $id = $row["STT"];
                             $recommend_poster = $row["poster"];
                             $recommend_phim = $row["Tenphim"];
                             $recommend_movie = $row["Movie"];
-                            echo "<li><a href='#'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
+                            echo "<li><a href='./movie/movie-details.php?id=$id'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
                         }
                            echo "</ul>";
-                        }
+                    }
+                    mysqli_free_result($result);
                 ?>
             </div>
                 <h3>PHIM LẺ MỚI CẬP NHẬT</h3>
             <div class="tphim2">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Theloai='Lãng mạn, hài' LIMIT 5";
+                    $sql = "SELECT * FROM content WHERE Namsx='2023' OR Namsx='2022' LIMIT 6";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
                         echo "<ul>";
                         while($row = mysqli_fetch_assoc($result)) 
                         {
+                            $id = $row["STT"];
                             $recommend_poster = $row["poster"];
                             $recommend_phim = $row["Tenphim"];
                             $recommend_movie = $row["Movie"];
-                            echo "<li><a href='#'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
+                            echo "<li><a href='./movie/movie-details.php?id=$id'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
                         }
                            echo "</ul>";
-                        }
+                    }
+                    mysqli_free_result($result);
                 ?>
             </div>
             <h3>PHIM BỘ MỚI CẬP NHẬT</h3>
             <div class="tphim3">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Quocgia='Việt Nam' LIMIT 5";
+                    $sql = "SELECT * FROM content WHERE Quocgia='Mỹ' LIMIT 6";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
                         echo "<ul>";
                         while($row = mysqli_fetch_assoc($result)) 
                         {
+                            $id = $row["STT"];
                             $recommend_poster = $row["poster"];
                             $recommend_phim = $row["Tenphim"];
                             $recommend_movie = $row["Movie"];
-                            echo "<li><a href='#'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
+                            echo "<li><a href='./movie/movie-details.php?id=$id'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
                         }
                             echo "</ul>";
-                        }
+                    }
+                    mysqli_free_result($result);
                 ?>
             </div>
-            <h3>PHIM LẺ MỚI CẬP NHẬT</h3>
+            <h3>PHIM HOẠT HÌNH</h3>
             <div class="tphim4">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Quocgia='Hàn Quốc' LIMIT 5";
+                    $sql = "SELECT * FROM content WHERE Quocgia='Hàn Quốc' OR Theloai='Hoạt hình, Hành động, Hài hước' LIMIT 6";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
                         echo "<ul>";
                         while($row = mysqli_fetch_assoc($result)) 
                         {
+                            $id = $row["STT"];
                             $recommend_poster = $row["poster"];
                             $recommend_phim = $row["Tenphim"];
                             $recommend_movie = $row["Movie"];
-                            echo "<li><a href='#'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
+                            echo "<li><a href='./movie/movie-details.php?id=$id'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
                         }
                            echo "</ul>";
-                        }
+                    }
+                    mysqli_free_result($result);
                 ?>
             </div>
 
             <h3>PHIM CHIẾU RẠP</h3>
             <div class="tphim5">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Namsx= 2023 LIMIT 4";
+                    $sql = "SELECT * FROM content WHERE Namsx= 2023 LIMIT 6";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
                         echo "<ul>";
                         while($row = mysqli_fetch_assoc($result)) 
                         {
+                            $id = $row["STT"];
                             $recommend_poster = $row["poster"];
                             $recommend_phim = $row["Tenphim"];
                             $recommend_movie = $row["Movie"];
-                            echo "<li><a href='#'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
+                            echo "<li><a href='./movie/movie-details.php?id=$id'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
                         }
                            echo "</ul>";
-                        }
+                    }
+                    mysqli_free_result($result);
                 ?>
             </div>
         </div>  
         <div id="sidebar">
             <h3>PHIM HOT</h3>
             <?php
-                    $sql = "SELECT * FROM content LIMIT 11";
+                    $sql = "SELECT * FROM content LIMIT 12";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
                         echo "<ul>";
                         while($row = mysqli_fetch_assoc($result)) 
                         {
+                            $id = $row["STT"];
                             $recommend_poster = $row["poster"];
                             $recommend_phim = $row["Tenphim"];
                             $recommend_movie = $row["Movie"];
-                            echo "<li><a href='#'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
+                            echo "<li><a href='./movie/movie-details.php?$id'><img src='$recommend_poster'><p>$recommend_movie</p>$recommend_phim</a></li>";
                         }
                            echo "</ul>";
-                        }
+                    }
+                    mysqli_free_result($result);
                 ?>
         </div>
 

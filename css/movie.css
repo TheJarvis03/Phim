@@ -32,6 +32,7 @@
 .dLeft-movie img {
     display: block;
     width: 80%;
+    height: 79%;
     margin: auto;
     margin-top: 25px;
 }
@@ -47,14 +48,9 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     text-align: center;
-    width: 50%;
+    width: 49%;
+    background-color: #851515;
 }  
-.bl1-movie{
-    background-color: #008d25;
-}
-.bl2-movie{
-    background-color: #d02727;
-}
 .dRight-movie {
     margin-top: 13px;
     margin-bottom: 15px;
@@ -164,7 +160,7 @@
 .recommend-movie ul{
     display: flex;
     margin: 10px;
-    flex-direction: column;
+    flex-direction: row;
 }
 .recommend-movie img{
     width: 150px;
@@ -173,6 +169,7 @@
 .recommend-movie li{
     width: 150px;
     word-wrap: break-word;
+    margin-right: 40px;
 }
 .recommend-movie a{
     font-size: 16px;
@@ -183,7 +180,6 @@
     font-size: 14px;
     color: white;
 }
-
 
 
 /* Cài đặt chung cho phần Sidebar */
