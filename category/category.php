@@ -57,7 +57,7 @@
 
                             echo "<div class='movie-item'>";
                                 echo "<ul>";
-                                    echo "<li><a href='../movie-details.php?id=$id'><img src='$category_poster'><p>$movie</p>$category_phim</a></li>";
+                                    echo "<li><a href='../movie/movie-details.php?id=$id'><img src='$category_poster'><p>$movie</p>$category_phim</a></li>";
                                 echo "</ul>";
                             echo "</div>";
                         }
