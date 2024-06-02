@@ -14,20 +14,22 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    color: #000;
 }
 .container table {
     min-height: 224px;
-    border-radius: 8px;
+    border-radius: 15px;
     background-color: #fff;
-    opacity: 0.8;
-    margin: 0 20px;
+    opacity: 0.7;
+    margin: 0 30px;
+    padding: 40px;
 }
 .container table input {
-    border-radius: 6px;
+    border-radius: 5px;
 }
 .form-title{
-    font-size: 26px;
-    font-weight: 300;
+    font-size: 25px;
+    font-weight: 250;
     padding-bottom: 6px;
     color: rgb(22, 22, 22);
     text-shadow: 2px 2px 2px rgb(60, 24, 190);

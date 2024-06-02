@@ -11,10 +11,10 @@
         </div>
 
         <div class="container">        
-        <table style="border: 2px solid rgb(156, 155, 155);">      
+        <table style="border: 3px solid rgb(156, 155, 155);">      
                 <tr>
                     <td>
-                        <h3 class="form-title">Đăng nhập</h3>
+                        <h2 class="form-title">Đăng nhập</h2>
                     </td>
                 </tr>
                 <tr>
@@ -35,11 +35,11 @@
                 <tr>
                     <div class="main-user-infor">
                     <td>Email</td>
-                    <td><input type="text" placeholder="Nhập email" name="email"></td>
+                    <td><input type="text" placeholder="Nhập email" name="email" required></td>
                 </tr>
                 <tr>
                     <td>Mật khẩu</td>
-                    <td><input type="password" placeholder="Mật khẩu" name="pass"></td>
+                    <td><input type="password" placeholder="Mật khẩu" name="pass" required></td>
                 </tr>
                 <tr>
                     <td><a href="">Quên mật khẩu?</a></td>
@@ -52,10 +52,10 @@
 
         
         
-            <table style="border: 2px solid rgb(124, 123, 123);">
+            <table style="border: 3px solid rgb(124, 123, 123);">
                 <tr>
                     <td>
-                        <h3 class="form-title">Đăng ký</h3>
+                        <h2 class="form-title">Đăng ký</h2>
                     </td>
                 </tr>
                 <tr>
@@ -75,35 +75,37 @@
                     <div class="user-input-box">
                 <tr>
                     <td>Email</td>
-                    <td><input type="text" placeholder="Họ và tên" name="email"></td>
+                    <td><input type="text" placeholder="Họ và tên" name="email" required></td>
                 </tr>
                 <tr>
                     <td>Họ và tên</td>
-                    <td><input type="text" placeholder="Họ và tên" name="ho_ten"></td>
+                    <td><input type="text" placeholder="Họ và tên" name="ho_ten" required></td>
                 </tr>
                 <tr>
                     <td>Số điện thoại</td>
-                    <td><input type="number" placeholder="Số điện thoại" name="sdt"></td>
+                    <td><input type="number" placeholder="Số điện thoại" name="sdt" required></td>
                 </tr>
                 <tr>
                     <td>Ngày sinh</td>
-                    <td><input type="date" placeholder="Ngày sinh" name="ngay_sinh"></td>
+                    <td><input type="date" placeholder="Ngày sinh" name="ngay_sinh" required></td>
                 </tr>
                 <tr>
                     <td>Địa chỉ</td>
-                    <td><input type="text" placeholder="Địa chỉ" name="dia_chi"></td>
+                    <td><input type="text" placeholder="Địa chỉ" name="dia_chi" required></td>
                 </tr>
                 <tr>
                     <td>Mật khẩu</td>
-                    <td><input type="password" placeholder="Mật khẩu" name="mat_khau"></td>
+                    <td><input type="password" placeholder="Mật khẩu" name="mat_khau" required></td>
                 </tr>
                 <tr>
                     <td>Nhập lại mật khẩu</td>
-                    <td><input type="password" placeholder="Nhập lại mật khẩu" name="mat_khaus"></td>
+                    <td><input type="password" placeholder="Nhập lại mật khẩu" name="mat_khaus" required></td>
                 </tr>
+
                 <tr>
-                    <td><input type="checkbox">Đồng ý với điều khoản của chúng tôi </td>
+                    <td>Đồng ý với điều khoản?<input type="checkbox" required></td>
                 </tr>
+            
                 <tr>
                     <div class="dangky">
                     <td><input type="submit" name="dang_ky" style="font-size: 20px; background-color: rgb(110, 97, 223); color: rgb(8, 8, 8);"value="Đăng ký" name="ok"></td>
