@@ -16,7 +16,7 @@
 
             $_SESSION['email'] = $email; 
             // trả về kết quả
-            header("location:../account/trang_thong_tin_tai_khoan.php");
+            header("location:../account/account.php");
         }else{
             // trả về tài khoản hoặc mật khẩu sai
             header("location:trang_dang_ky_dang_nhap.php?thongbaodangnhap=Sai tài khoản hoặc mật khẩu");

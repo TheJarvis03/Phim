@@ -95,49 +95,6 @@ INSERT INTO `content` (`STT`, `Tenphim`, `Movie`, `Theloai`, `Quocgia`, `Namsx`,
 (49, 'Chúa tể Godzilla: Đế vương bất tử', 'Godzilla: King of the Monsters', 'Hành động, Khoa học viễn tưởng', 'Mỹ', 2019, 'https://upload.wikimedia.org/wikipedia/vi/f/f1/Chua_te_Godzilla_bia_poster.jpg'),
 (50, 'Avengers: Hồi kết', 'Avengers 4: Endgame', 'Hành động, Siêu anh hùng', 'Mỹ', 2019, 'https://upload.wikimedia.org/wikipedia/vi/2/2d/Avengers_Endgame_bia_teaser.jpg');
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `don_hang`
---
-
-DROP TABLE IF EXISTS `don_hang`;
-CREATE TABLE IF NOT EXISTS `don_hang` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `id_tk` bigint NOT NULL,
-  `id_goi` bigint NOT NULL,
-  `ma_donhang` text COLLATE utf8mb3_unicode_ci NOT NULL,
-  `so_tien` int NOT NULL,
-  `trang_thai` text COLLATE utf8mb3_unicode_ci NOT NULL,
-  `ngay_batdau` date DEFAULT NULL,
-  `ngay_ketthuc` date DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `goi_thanh_vien`
---
-
-DROP TABLE IF EXISTS `goi_thanh_vien`;
-CREATE TABLE IF NOT EXISTS `goi_thanh_vien` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `ten` text COLLATE utf8mb3_unicode_ci NOT NULL,
-  `gia` int NOT NULL,
-  `noi_dung` longtext COLLATE utf8mb3_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
-
---
--- Đang đổ dữ liệu cho bảng `goi_thanh_vien`
---
-
-INSERT INTO `goi_thanh_vien` (`id`, `ten`, `gia`, `noi_dung`) VALUES
-(1, 'vip0', 1000, 'vip o'),
-(2, 'vip1', 2000, 'vip 1'),
-(3, 'vip2', 3000, 'vip 2'),
-(4, 'vip3', 4000, 'vip 3');
 
 -- --------------------------------------------------------
 
@@ -219,22 +176,102 @@ INSERT INTO `phim` (`id`, `danh_gia`, `trang_thai`, `chat_luong`, `ngon_ngu`, `t
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `don_hang`
+--
+
+CREATE TABLE `don_hang` (
+  `id` int(11) NOT NULL,
+  `id_tk` bigint(20) NOT NULL,
+  `id_goi` bigint(20) NOT NULL,
+  `ma_donhang` text NOT NULL,
+  `so_tien` int(11) NOT NULL,
+  `trang_thai` text NOT NULL,
+  `ngay_batdau` date DEFAULT NULL,
+  `ngay_ketthuc` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `don_hang`
+--
+
+INSERT INTO `don_hang` (`id`, `id_tk`, `id_goi`, `ma_donhang`, `so_tien`, `trang_thai`, `ngay_batdau`, `ngay_ketthuc`) VALUES
+(10, 6, 3, 'DH_20240530181055', 108000, 'da_chuyen_khoan', NULL, NULL),
+(11, 6, 1, 'DH_20240530181155', 260000, 'da_chuyen_khoan', NULL, NULL),
+(12, 6, 3, 'DH_20240530181217', 108000, 'da_chuyen_khoan', NULL, NULL),
+(13, 6, 3, 'DH_20240601111306', 108000, 'da_chuyen_khoan', NULL, NULL),
+(14, 6, 2, 'DH_20240601111420', 220000, 'chua_thanh_toan', NULL, NULL),
+(15, 6, 2, 'DH_20240601112622', 220000, 'da_chuyen_khoan', NULL, NULL),
+(16, 6, 3, 'DH_20240601112634', 108000, 'chua_thanh_toan', NULL, NULL),
+(17, 6, 4, 'DH_20240601114320', 70000, 'da_chuyen_khoan', NULL, NULL),
+(18, 6, 2, 'DH_20240601114939', 220000, 'chua_thanh_toan', NULL, NULL),
+(19, 6, 2, 'DH_20240601115728', 220000, 'da_chuyen_khoan', NULL, NULL),
+(20, 6, 1, 'DH_20240601115739', 260000, 'chua_thanh_toan', NULL, NULL),
+(21, 6, 2, 'DH_20240601122102', 220000, 'da_chuyen_khoan', NULL, NULL),
+(22, 6, 1, 'DH_20240601122139', 260000, 'chua_thanh_toan', NULL, NULL),
+(23, 6, 2, 'DH_20240601122213', 220000, 'da_chuyen_khoan', NULL, NULL),
+(24, 6, 1, 'DH_20240602122330', 260000, 'da_chuyen_khoan', NULL, NULL),
+(25, 6, 3, 'DH_20240602123309', 108000, 'chua_thanh_toan', NULL, NULL),
+(26, 6, 3, 'DH_20240602123410', 108000, 'chua_thanh_toan', NULL, NULL),
+(27, 6, 1, 'DH_20240602124601', 260000, 'chua_thanh_toan', NULL, NULL),
+(28, 6, 2, 'DH_20240602142823', 220000, 'da_chuyen_khoan', NULL, NULL),
+(29, 6, 2, 'DH_20240602143552', 220000, 'chua_thanh_toan', NULL, NULL),
+(30, 6, 2, 'DH_20240602145019', 220000, 'chua_thanh_toan', NULL, NULL),
+(31, 6, 2, 'DH_20240602150127', 220000, 'chua_thanh_toan', NULL, NULL),
+(32, 6, 2, 'DH_20240602150233', 220000, 'da_chuyen_khoan', NULL, NULL),
+(33, 6, 3, 'DH_20240602153410', 108000, 'da_chuyen_khoan', NULL, NULL),
+(34, 6, 2, 'DH_20240602153442', 220000, 'chua_thanh_toan', NULL, NULL),
+(35, 6, 3, 'DH_20240602164844', 108000, 'chua_thanh_toan', NULL, NULL),
+(36, 6, 1, 'DH_20240602170308', 260000, 'da_chuyen_khoan', NULL, NULL),
+(37, 6, 2, 'DH_20240602170909', 220000, 'chua_thanh_toan', NULL, NULL),
+(38, 6, 2, 'DH_20240602170918', 220000, 'chua_thanh_toan', NULL, NULL),
+(39, 6, 2, 'DH_20240602170925', 220000, 'chua_thanh_toan', NULL, NULL),
+(40, 6, 1, 'DH_20240602171430', 260000, 'da_chuyen_khoan', NULL, NULL),
+(41, 6, 3, 'DH_20240602172149', 108000, 'chua_thanh_toan', NULL, NULL),
+(42, 6, 1, 'DH_20240602172358', 260000, 'da_chuyen_khoan', NULL, NULL),
+(43, 6, 1, 'DH_20240602172451', 260000, 'da_chuyen_khoan', NULL, NULL),
+(44, 6, 2, 'DH_20240602172516', 220000, 'da_chuyen_khoan', NULL, NULL),
+(45, 6, 1, 'DH_20240602173332', 260000, 'da_chuyen_khoan', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `goi_thanh_vien`
+--
+
+CREATE TABLE `goi_thanh_vien` (
+  `id` int(11) NOT NULL,
+  `ten` text NOT NULL,
+  `gia` int(11) NOT NULL,
+  `noi_dung` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `goi_thanh_vien`
+--
+
+INSERT INTO `goi_thanh_vien` (`id`, `ten`, `gia`, `noi_dung`) VALUES
+(1, 'VIP 0', 260000, 'Chất lượng:\r\nTốt nhất\r\n+ Độ phân giải:\r\n4K (Ultra HD)'),
+(2, 'VIP 1', 220000, 'Chất lượng:\r\nTuyệt vời\r\n+ Độ phân giải:\r\n1080p (Full HD)'),
+(3, 'VIP 2', 108000, 'Chất lượng:\r\nTốt\r\n+ Độ phân giải:\r\n720p (HD)'),
+(4, 'VIP 3', 70000, 'Chất lượng:\r\nKhá\r\n+ Độ phân giải:\r\n480p');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `tai_khoan`
 --
 
-DROP TABLE IF EXISTS `tai_khoan`;
-CREATE TABLE IF NOT EXISTS `tai_khoan` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `email` text COLLATE utf8mb4_general_ci NOT NULL,
-  `password` text COLLATE utf8mb4_general_ci NOT NULL,
-  `ho_ten` text COLLATE utf8mb4_general_ci NOT NULL,
-  `sdt` int NOT NULL,
+CREATE TABLE `tai_khoan` (
+  `id` int(11) NOT NULL,
+  `email` text NOT NULL,
+  `password` text NOT NULL,
+  `ho_ten` text NOT NULL,
+  `sdt` int(11) NOT NULL,
   `ngay_sinh` date NOT NULL,
-  `dia_chi` text COLLATE utf8mb4_general_ci NOT NULL,
-  `quyen_han` text COLLATE utf8mb4_general_ci NOT NULL,
-  `id_goi_thanh_vien` bigint DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+  `dia_chi` text NOT NULL,
+  `quyen_han` text NOT NULL,
+  `id_goi_thanh_vien` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `tai_khoan`
@@ -242,10 +279,55 @@ CREATE TABLE IF NOT EXISTS `tai_khoan` (
 
 INSERT INTO `tai_khoan` (`id`, `email`, `password`, `ho_ten`, `sdt`, `ngay_sinh`, `dia_chi`, `quyen_han`, `id_goi_thanh_vien`) VALUES
 (1, 'nhung123@gmail.com', '1', 'gh', 454, '2024-05-26', 'fgf', 'member', NULL),
-(2, 'abc@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'abc', 12, '2024-05-29', 'qư', 'member', 3),
+(2, 'abc@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'abc', 12, '2024-05-29', 'qư', 'member', NULL),
 (3, 'acc2@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'họ tên acc 2', 122222222, '2024-05-26', 'acc 2 dia chi', 'member', NULL),
 (4, 'acc2@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'họ tên acc 2', 122222222, '2024-05-26', 'acc 2 dia chi', 'member', NULL),
-(5, 'acc3@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'acc3', 3333333, '2024-05-27', '3333333', 'member', NULL);
+(5, 'acc3@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'acc3', 3333333, '2024-05-27', '3333333', 'member', NULL),
+(6, 'Mai Quỳnh', 'b59c67bf196a4758191e42f76670ceba', 'Mai Quỳnh', 358985998, '2013-01-10', 'bhfu', 'member', NULL);
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `don_hang`
+--
+ALTER TABLE `don_hang`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `goi_thanh_vien`
+--
+ALTER TABLE `goi_thanh_vien`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `tai_khoan`
+--
+ALTER TABLE `tai_khoan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `don_hang`
+--
+ALTER TABLE `don_hang`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
+--
+-- AUTO_INCREMENT cho bảng `goi_thanh_vien`
+--
+ALTER TABLE `goi_thanh_vien`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT cho bảng `tai_khoan`
+--
+ALTER TABLE `tai_khoan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,7 +1,7 @@
 <?php include('../layout/header.php'); ?>
 <?php include('../layout/menu.php'); ?>
 
-            <?php
+        <?php
             if (isset($_SESSION['email']) && isset($_SESSION['id_goi'])){
                 $s_email = $_SESSION['email'];
                 // nếu có session email thì lấy thông tin người dùng
@@ -39,10 +39,13 @@
                 header("location:../login-register/trang_dang_ky_dang_nhap.php");
             }
         ?>
-                
             <div class="order-item">
+
                 <table>
-                    <tr>Tạm tính</tr>
+                    <tr>
+                        <td>Tạm tính</td>
+
+                        </tr>
                     <tr>
                         <td>Tên người chuyển khoản:</td>
                         <td><?php echo $ho_ten ?></td>
@@ -75,10 +78,10 @@
                         <td><?php  echo $so_tien;  ?> VND</td>
                     </tr>
                     <tr>
-                        <td><p>Nhấn "Tiếp tục" để thanh toán đơn hàng của bạn </p></td>
+                        <td><p>Nhấn "Thanh toán" để thanh toán đơn hàng của bạn </p></td>
                     </tr>
                     <tr>
-                        <td><a href="len_don_hang_va_thanh_toan.php">Thanh toán</a></td>
+                        <td><a style="color: red;" href="len_don_hang_va_thanh_toan.php">Thanh toán</a></td>
                     </tr>
                 </table>
             </div>
