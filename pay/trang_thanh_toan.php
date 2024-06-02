@@ -1,7 +1,7 @@
 <?php include('../layout/header.php'); ?>
 <?php include('../layout/menu.php'); ?>
 
-<?php  
+        <?php  
                 if( isset($_SESSION['ma_donhang'])){
                     $ma_donhang = $_SESSION['ma_donhang'];
                     $get_thong_tin = "SELECT * FROM don_hang WHERE ma_donhang='$ma_donhang'" ;
@@ -17,8 +17,7 @@
                 }else{
                     header("location:trang_xem_cac_goi.php");
                 }
-            ?>
-                
+        ?>     
             <div style="margin-left: 300px; color: black" class="ck">
                 <table>
                     <tr>

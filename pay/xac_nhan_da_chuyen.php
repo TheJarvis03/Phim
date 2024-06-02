@@ -6,9 +6,9 @@
         $sql_cap_nhat_trangthai = mysqli_query($conn, $cap_nhat_trangthai);
         unset($_SESSION['ma_donhang']);
         unset($_SESSION['id_goi']);
-        header("location:index.php");
+        header("location:../index.php");
     }else{
-        header("location:index.php");
+        header("location:../index.php");
     }
 
 
