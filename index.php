@@ -54,8 +54,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#">Đăng nhập</a></li>
-                    <li><a href="#">Mua gói</a></li>
+                    <li><a href="./login-register/trang_dang_ky_dang_nhap.php">Đăng nhập</a></li>
+                    <li><a href="./pay/trang_xem_cac_goi.php">Mua gói</a></li>
                 </ul>
             </div>
         </div>
@@ -200,19 +200,19 @@
                 <div class="rFooter1">
                     <ul>
                         <li>Phim mới</li>
-                        <li><a href="#">Phim hoạt hình</a></li>
-                        <li><a href="#">Phim chiếu rạp</a></li>
-                        <li><a href="#">Phim hình sự</a></li>
-                        <li><a href="#">Phim kinh dị</a></li>
+                        <li><a href="./category/category.php?xem=hoathinh">Phim hoạt hình</a></li>
+                        <li><a href="./category/category.php?xem=chieurap">Phim chiếu rạp</a></li>
+                        <li><a href="./category/category.php?xem=hinhsu">Phim hình sự</a></li>
+                        <li><a href="./category/category.php?xem=kinhdi">Phim kinh dị</a></li>
                     </ul>
                 </div>
                 <div class="rFooter2">
                     <ul>
                         <li>Phim hay</li>
-                        <li><a href="#">Phim Âu Mỹ</a></li>
-                        <li><a href="#">Phim Hàn Quốc</a></li>
-                        <li><a href="#">Phim Nhật Bản</a></li>
-                        <li><a href="#">Phim Thái Lan</a></li>
+                        <li><a href="./category/category.php?xem=aumy">Phim Âu Mỹ</a></li>
+                        <li><a href="./category/category.php?xem=hanquoc">Phim Hàn Quốc</a></li>
+                        <li><a href="./category/category.php?xem=nhatban">Phim Nhật Bản</a></li>
+                        <li><a href="./category/category.php?xem=thailan">Phim Thái Lan</a></li>
                     </ul>
                 </div>
                 <div class="rFooter3">
