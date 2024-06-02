@@ -11,7 +11,7 @@
 
 .lcontent-category{
     float: left;
-    width: 13%;
+    width: 14%;
     background-color: #292929; /* Màu nền menu */
     border-radius: 10px; /* Tất cả các góc bo tròn 10px */
     position: relative; /* Cho phép định vị các phần tử con tuyệt đối */
@@ -23,12 +23,16 @@
     margin-left: 30px;
 }
 .lcontent-category h4{
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 5px;
 }
 .lcontent-category a{
-    font-size: 20px;
+    font-size: 17px;
     margin-left: 40px;
+}
+.lcontent-category a:hover{
+    background-color: #ff9249;
+    color: #fff;
 }
 .theoyc{
     clear: both;
@@ -65,7 +69,7 @@
 }
 .movie-item li img {
     width: 100%;
-    height: 300px;
+    height: 270px;
 }
 .movie-item a{
     font-size: 19px;
@@ -100,7 +104,7 @@
     border-radius: 3px;
 }
 
-.pagination a.active,
+.pagination a:active,
 .pagination a:hover {
     background-color: #333;
     color: #fff;

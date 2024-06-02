@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `content` (
   `Namsx` float DEFAULT NULL,
   `poster` varchar(255) NOT NULL,
   PRIMARY KEY (`STT`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `content`
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `don_hang` (
   `ngay_batdau` date DEFAULT NULL,
   `ngay_ketthuc` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `goi_thanh_vien` (
   `gia` int NOT NULL,
   `noi_dung` longtext COLLATE utf8mb3_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Đang đổ dữ liệu cho bảng `goi_thanh_vien`
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `phim` (
   `video` varchar(255) DEFAULT NULL,
   `noi_dung` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `phim`
@@ -234,7 +234,7 @@ CREATE TABLE IF NOT EXISTS `tai_khoan` (
   `quyen_han` text COLLATE utf8mb4_general_ci NOT NULL,
   `id_goi_thanh_vien` bigint DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `tai_khoan`
