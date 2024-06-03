@@ -17,7 +17,7 @@
                 }else{
                     header("location:trang_xem_cac_goi.php");
                 }
-        ?>     
+        ?>
             <div style="margin-left: 300px; color: black" class="ck">
                 <table>
                     <tr>

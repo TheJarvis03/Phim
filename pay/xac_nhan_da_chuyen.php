@@ -1,4 +1,4 @@
-<?php include('config/connect_sql.php'); ?>
+<?php include('config/connect.php'); ?>
 <?php
     if( isset( $_GET['ma_donhang'])){
         $ma_donhang = $_GET['ma_donhang'];

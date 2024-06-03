@@ -25,7 +25,7 @@
                         <td>Thông tin gói:<?php echo $row['noi_dung']; ?> </td> 
                     </tr>
                     <tr>
-                        <td><a href="chon_goi_mua.php?goi_mua=<?php echo $row['id']; ?>">Mua gói</a></td>
+                        <td><a href="trang_xac_nhan_goi_mua.php?goi_mua=<?php echo $row['id']; ?>">Mua gói</a></td>
                     </tr>
                 </table>
             </div>
