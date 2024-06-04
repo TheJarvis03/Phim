@@ -64,7 +64,7 @@
             <h3>PHIM NỔI BẬT</h3>
             <div class="tphim1">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Quocgia = 'Hàn Quốc' OR Quocgia = 'Mỹ' LIMIT 6";
+                    $sql = "SELECT * FROM content WHERE Quocgia = 'Hàn Quốc' OR Quocgia = 'Mỹ' LIMIT 5";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
@@ -82,10 +82,10 @@
                     mysqli_free_result($result);
                 ?>
             </div>
-                <h3>PHIM LẺ MỚI CẬP NHẬT</h3>
+            <h3>PHIM LẺ MỚI CẬP NHẬT</h3>
             <div class="tphim2">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Namsx='2023' OR Namsx='2022' LIMIT 6";
+                    $sql = "SELECT * FROM content WHERE Namsx='2023' OR Namsx='2022' LIMIT 5";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
@@ -106,7 +106,7 @@
             <h3>PHIM BỘ MỚI CẬP NHẬT</h3>
             <div class="tphim3">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Quocgia='Mỹ' LIMIT 6";
+                    $sql = "SELECT * FROM content WHERE Quocgia='Mỹ' LIMIT 5";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
@@ -127,7 +127,7 @@
             <h3>PHIM HOẠT HÌNH</h3>
             <div class="tphim4">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Quocgia='Mỹ' OR Theloai='Hoạt hình' LIMIT 6";
+                    $sql = "SELECT * FROM content WHERE Quocgia='Mỹ' OR Theloai='Hoạt hình' LIMIT 5";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
@@ -149,7 +149,7 @@
             <h3>PHIM CHIẾU RẠP</h3>
             <div class="tphim5">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Namsx= 2023 LIMIT 6";
+                    $sql = "SELECT * FROM content WHERE Namsx= 2023 LIMIT 5";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {

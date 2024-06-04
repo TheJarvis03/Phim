@@ -163,11 +163,11 @@
     flex-direction: row;
 }
 .recommend-movie img{
-    width: 150px;
-    height: 220px;
+    width: 140px;
+    height: 210px;
 }
 .recommend-movie li{
-    width: 150px;
+    width: 140px;
     word-wrap: break-word;
     margin-right: 40px;
 }

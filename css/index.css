@@ -24,6 +24,7 @@
 .tphim2 ul {
     display: flex;
     list-style: none;
+    flex-direction: row;
 }
 .tphim2 img{
     border: 1px solid black;
@@ -46,6 +47,7 @@
 .tphim3 ul {
     display: flex;
     list-style: none;
+    flex-direction: row;
 }
 .tphim3 img{
     border: 1px solid black;
@@ -118,6 +120,7 @@
 #content h3{
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 
