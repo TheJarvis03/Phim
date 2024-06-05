@@ -15,11 +15,13 @@
                 <h1><a href="index.php"><img src="img/Logo.jpg" alt="Logo"></a></h1>
             </div>
             <label for="search-input" class="searchBox">
-                <input type="text" placeholder="Search here..." id="search-input"/>
-                <button class="searchButton">
-                    <i class="fas fa-search" id="searchIcon"></i>
-                </button>
-            </label>
+                    <form action="./category/category.php" method="get">
+                        <input type="text" id="search-input" name="search" aria-label="Search" placeholder="Search here...">
+                        <button type="submit" class="searchButton">
+                            <i class="fas fa-search" id="searchIcon"></i>
+                        </button>
+                    </form>
+                </label>
             <div class="mRight">
                 <ul>
                     <li><a href="./category/category.php?xem=phimle">Phim lẻ</a></li>

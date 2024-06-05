@@ -3,10 +3,7 @@
     clear: both;
     float: left;
     width: 70%;
-    border: 1px solid #ddd;
-    border-bottom: none;
     padding: 20px;
-    color: #fff;
 }
 #content-movie h3{
     font-size: 24;
@@ -122,10 +119,7 @@
     clear: both;
     float: left;
     width: 70%;
-    border: 1px solid #ddd;
-    border-bottom: none;
     padding: 20px;
-    color: #fff;
 }
 
 .view-watch{
@@ -186,12 +180,10 @@
 #sidebar-movie {
     float: right;
     width: 20%;
-    border: 1px solid #ddd;
     padding: 20px; 
 }
 #sidebar-movie ul {
     background-color: rgb(21, 21, 24);
-    border: 1px solid #ddd;
     padding: 10px;
     align-items: center;
 }

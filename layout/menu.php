@@ -3,7 +3,7 @@
                     <h1><a href="../index.php"><img src="../img/Logo.jpg" alt="Logo"/></a></h1>
                 </div>
                 <label for="search-input" class="searchBox">
-                    <form action="category.php" method="get">
+                    <form action="../category/category.php" method="get">
                         <input type="text" id="search-input" name="search" aria-label="Search" placeholder="Search here...">
                         <button type="submit" class="searchButton">
                             <i class="fas fa-search" id="searchIcon"></i>
