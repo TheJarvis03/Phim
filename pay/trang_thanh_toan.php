@@ -29,7 +29,7 @@
                                             padding: 12 50px;
                                             height: 150px;
                                             width: 220px;
-                                            margin-left: 100px;" src="./img/QR.jfif" alt=""> </td>
+                                            margin-left: 100px;" src="../img/QR.jfif" alt=""> </td>
                     </tr>
                     <tr>
                         <td>Thông tin chuyển khoản</td>

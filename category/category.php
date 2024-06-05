@@ -3,7 +3,7 @@
 
     <div class="content-category">    
         <div class="trangchu">
-            <a href="">TRANG CHỦ</a>
+            <a href="../index.php">TRANG CHỦ</a>
         </div>
         <div class="theoyc">
             <a href="">Theo yêu cầu</a>
@@ -87,12 +87,17 @@
                     $temp = '';
                     if(isset($_GET['search']) && !empty($_GET['search'])){
                         $searchInput = $_GET['search'];
-                        showMoviesWithPagination("SELECT Tenphim, Movie, poster, STT FROM Content WHERE Tenphim LIKE '%$searchInput%' OR Movie LIKE '%$searchInput%'", 12, $currentPage);
-                        showMoviesWithPagination("SELECT Tenphim, Movie, poster, STT FROM Content", 12, $currentPage);
+                        $sql = "SELECT Tenphim, Movie, poster, STT FROM Content WHERE Tenphim LIKE '%$searchInput%' OR Movie LIKE '%$searchInput%'";
+                    } else {
+                        $sql = "SELECT Tenphim, Movie, poster, STT FROM Content";
                     }
+                    showMoviesWithPagination($sql, 12, $currentPage);
                 }
 
                 switch ($temp) {
+                    case 'phimle':
+                        showMoviesWithPagination("SELECT Tenphim, Movie, poster, STT FROM Content", 12, $currentPage);
+                        break;
                     case 'tatca':
                         showMoviesWithPagination("SELECT Tenphim, Movie, poster, STT FROM Content", 12, $currentPage);
                         break;
@@ -156,9 +161,21 @@
                     case 'tamly':
                         showMoviesWithPagination("SELECT Tenphim, Movie, poster, STT FROM Content WHERE Theloai LIKE '%Tâm lý%' ORDER BY Tenphim ASC", 12, $currentPage);
                         break;      
-                    case 'tam':
-                        showMoviesWithPagination("SELECT * FROM phim WHERE tenphim LIKE '%$searchInput%' ORDER BY Tenphim ASC", 12, $currentPage);
+                    case 'aumy':
+                        showMoviesWithPagination("SELECT Tenphim, Movie, poster, STT FROM Content WHERE Quocgia LIKE '%Âu Mỹ%' ORDER BY Tenphim ASC", 12, $currentPage);
                         break; 
+                    case 'hanquoc':
+                        showMoviesWithPagination("SELECT Tenphim, Movie, poster, STT FROM Content WHERE Quocgia LIKE '%Hàn Quốc%' ORDER BY Tenphim ASC", 12, $currentPage);
+                        break; 
+                    case 'nhatban':
+                        showMoviesWithPagination("SELECT Tenphim, Movie, poster, STT FROM Content WHERE Quocgia LIKE '%Nhật Bản%' ORDER BY Tenphim ASC", 12, $currentPage);
+                        break;   
+                    case 'thailan':
+                        showMoviesWithPagination("SELECT Tenphim, Movie, poster, STT FROM Content WHERE Quocgia LIKE '%Thái Lan%' ORDER BY Tenphim ASC", 12, $currentPage);
+                        break; 
+                    case 'chieurap':
+                        showMoviesWithPagination("SELECT Tenphim, Movie, poster, STT FROM Content WHERE Theloai LIKE '%chiếu rạp%' ORDER BY Tenphim ASC", 12, $currentPage);
+                        break;             
                 }
             ?>
         </div>

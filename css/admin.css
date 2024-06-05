@@ -1,0 +1,76 @@
+#admin{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+#admin h4{
+    text-align: left;
+    color: #ff9249;
+    font-size: 20px;
+}
+#admin ul{
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+}
+#admin img{
+    width: 140px;
+    height: 210px;
+}
+#admin li{
+    width: 140px;
+    word-wrap: break-word;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+}
+#admin a{
+    font-size: 16px;
+    color: #ff9249;
+    text-align: justify;
+}
+#admin p{
+    font-size: 14px;
+    color: white;
+}
+
+.admin-content{
+    display: flex;
+}
+
+.admin-content .movie{
+    display: inline-block;
+}
+.admin-content .movie2{
+    display: inline-block;
+}
+.admin-content .evaluate{
+    display: inline-block;
+}
+.admin-content .status{
+    display: inline-block;
+}
+.admin-content .quality{
+    display: inline-block;
+}
+.admin-content .language{
+    display: inline-block;
+}
+.admin-content .year{
+    display: inline-block;
+}
+.admin-content .time{
+    display: inline-block;
+}
+.admin-content .category{
+    display: inline-block;
+}
+.admin-content .nation{
+    display: inline-block;
+}
+.admin-content .content{
+    display: inline-block;
+}
+.admin-content button{
+    display: inline-block;
+}
