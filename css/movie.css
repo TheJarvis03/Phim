@@ -197,13 +197,15 @@
 }
 #sidebar-movie img {
     float: left;
-    width: 35%;
+    width: 110px;
+    height: 165px;
     margin-right: 10px;
 }
 #sidebar-movie li {
-    display: inline-block;
     margin-bottom: 5px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 #sidebar-movie h4{
     text-align: left;

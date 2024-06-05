@@ -5,65 +5,66 @@
 }
 .tphim1 img{
     border: 1px solid black;
-    width: 150px;
-    height: 200px;
+    width: 160px;
+    height: 210px;
 }
 .tphim1 li{
-    margin-left: 10px;
-    width: 150px;
+    width: 160px;
     word-wrap: break-word;
     margin: auto;
 }
 .tphim1 a{
+    font-size: 18px;
     color: #ff9249;
 }
 .tphim1 p{
+    font-size: 16px;
     color: white;
 }
 
 .tphim2 ul {
     display: flex;
     list-style: none;
-    flex-direction: row;
 }
 .tphim2 img{
     border: 1px solid black;
-    width: 150px;
-    height: 200px;
+    width: 160px;
+    height: 210px;
 }
 .tphim2 li{
-    margin-left: 10px;
-    width: 150px;
+    width: 160px;
     word-wrap: break-word;
     margin: auto;
 }
 .tphim2 a{
+    font-size: 18px;
     color: #ff9249;
 }
 .tphim2 p{
+    font-size: 16px;
     color: white;
 }
 
 .tphim3 ul {
     display: flex;
     list-style: none;
-    flex-direction: row;
 }
 .tphim3 img{
     border: 1px solid black;
-    width: 150px;
-    height: 200px;
+    width: 160px;
+    height: 210px;
 }
 .tphim3 li{
-    margin-left: 10px;
-    width: 150px;
+    width: 160px;
     word-wrap: break-word;
     margin: auto;
 }
 .tphim3 a{
+    font-size: 18px;
     color: #ff9249;
 }
 .tphim3 p{
+    font-size: 16px;
     color: white;
 }
 
@@ -73,19 +74,20 @@
 }
 .tphim4 img{
     border: 1px solid black;
-    width: 150px;
-    height: 200px;
+    width: 160px;
+    height: 210px;
 }
 .tphim4 li{
-    margin-left: 10px;
-    width: 150px;
+    width: 160px;
     word-wrap: break-word;
     margin: auto;
 }
 .tphim4 a{
+    font-size: 18px;
     color: #ff9249;
 }
 .tphim4 p{
+    font-size: 16px;
     color: white;
 }
 
@@ -95,26 +97,27 @@
 }
 .tphim5 img{
     border: 1px solid black;
-    width: 150px;
-    height: 200px;
+    width: 160px;
+    height: 210px;
 }
 .tphim5 li{
-    margin-left: 10px;
-    width: 150px;
+    width: 160px;
     word-wrap: break-word;
     margin: auto;
 }
 .tphim5 a{
+    font-size: 18px;
     color: #ff9249;
 }
 .tphim5 p{
+    font-size: 16px;
     color: white;
 }
 
 #content{
     background-color: #333;
     float: left;
-    width: 76.6%;
+    width: 77%;
     border: 1px solid #a3a2a3;
 }
 #content h3{
@@ -129,7 +132,6 @@
     width: 18%;
     padding: 20px; 
     border: 1px solid #ddd;
-    border-bottom: 10px;
 }
 #sidebar ul {
     background-color: rgb(21, 21, 24);
@@ -139,20 +141,28 @@
 }
 #sidebar img {
     float: left;
-    width: 35%;
+    width: 90px;
+    height: 145px;
     margin-right: 10px;
 }
 #sidebar li {
-    display: inline-block;
     margin-top: 5px;
     margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+#sidebar h3{
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 #sidebar p, #sidebar a{
-    margin-top: 35px;
+    margin-top: 5px;
 }
 #sidebar p{
     font-size: 14px;
     color: white;
+    text-align: left;
 }
 #sidebar a{
     font-size: 16px;

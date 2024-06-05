@@ -1,30 +1,27 @@
 <?php include('../layout/header.php') ?>
 <?php include('../layout/menu.php') ?>
-
-        <?php
-            if (isset($_SESSION['email'])){
-                $s_email = $_SESSION['email'];
-                // nếu có session email thì lấy thông tin người dùng
-                $get_thong_tin = "SELECT * FROM tai_khoan WHERE email='$s_email'" ;
-                $kq_get_thong_tin = mysqli_query($conn, $get_thong_tin);
-                if (mysqli_num_rows($kq_get_thong_tin) > 0){
-                    while ($row = mysqli_fetch_assoc($kq_get_thong_tin)) {
-                        $ho_ten = $row["ho_ten"];
-                        $sdt = $row["sdt"];
-                        $ngay_sinh = $row["ngay_sinh"];
-                        $email = $s_email;
-                        $dia_chi = $row["dia_chi"];
-                    }
-                }else{
-                    // nếu không có tài khoản thì ra trang đăng ký
-                    header("location:../login-register/trang_dang_ky_dang_nhap.php");
-                }
-            }else{
-                // nếu không có session email thì quay lại trang đăng nhập 
-                header("location:../login-register/trang_dang_ky_dang_nhap.php");
-            }
-        ?>
-
+<?php
+if (isset($_SESSION['email'])) {
+    $s_email = $_SESSION['email'];
+    $get_thong_tin = "SELECT * FROM tai_khoan WHERE email='$s_email'";
+    $kq_get_thong_tin = mysqli_query($conn, $get_thong_tin);
+    if (mysqli_num_rows($kq_get_thong_tin) > 0) {
+        while ($row = mysqli_fetch_assoc($kq_get_thong_tin)) {
+            $ho_ten = $row["ho_ten"];
+            $sdt = $row["sdt"];
+            $ngay_sinh = $row["ngay_sinh"];
+            $email = $s_email;
+            $dia_chi = $row["dia_chi"];
+        }
+    } else {
+        // if there is no account, redirect to the registration page
+        echo "<script type='text/javascript'>window.location.href='../login-register/trang_dang_ky_dang_nhap.php';</script>";
+    }
+} else {
+    // if there is no session email, redirect to the login page
+    echo "<script type='text/javascript'>window.location.href='../login-register/trang_dang_ky_dang_nhap.php';</script>";
+}
+?>
 <div id="content">
     <div class="content1">
         <div class="lcontent1">
@@ -38,10 +35,9 @@
                             <li>
                                 <div class="subMenu">
                                     <ul>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-user"> Profile</i></a></li></br>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-gear"> Setting</i></a></li></br>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-box"> Data
-                                                    management</i></a></br>
+                                        <li><a href="#"><i class="fa-sharp fa-solid fa-user"> Profile</i></a></li><br>
+                                        <li><a href="#"><i class="fa-sharp fa-solid fa-gear"> Setting</i></a></li><br>
+                                        <li><a href="#"><i class="fa-sharp fa-solid fa-box"> Data management</i></a><br>
                                         </li>
                                     </ul>
                                 </div>
@@ -80,26 +76,26 @@
                             <h4><i class="fa-sharp fa-solid fa-gear"> Setting</i></h4>
                         </button></a>
                 </li>
-                </ul>
-            </div>
-            <div class="lct3-3">
-                <li>
-                    <a href=""><button>
-                            <h4><i class="fa-sharp fa-solid fa-box"> Data management</i></h4>
-                        </button></a>
-                </li>
-                </ul>
-            </div>
+            </ul>
         </div>
-        <div class="rcontent4">
-            <ul><button>
-                    <li>Họ Tên:</li>
-                    <li>SĐT: </li>
-                    <li>Ngày sinh: </li>
-                    <li>Email: </li>
-                    <li>Địa chỉ: </li>
-                </button></ul>
-        </div>
+        <div class="lct3-3">
+            <li>
+                <a href=""><button>
+                        <h4><i class="fa-sharp fa-solid fa-box"> Data management</i></h4>
+                    </button></a>
+            </li>
+        </ul>
     </div>
+</div>
+<div class="rcontent4">
+    <ul><button>
+            <li>Họ Tên: <?php echo $ho_ten; ?></li>
+            <li>SĐT: <?php echo $sdt; ?></li>
+            <li>Ngày sinh: <?php echo $ngay_sinh; ?></li>
+            <li>Email: <?php echo $email; ?></li>
+            <li>Địa chỉ: <?php echo $dia_chi; ?></li>
+        </button></ul>
+</div>
+</div>
 </div>
 <?php include('../layout/footer.php'); ?>
