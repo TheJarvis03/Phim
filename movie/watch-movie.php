@@ -21,7 +21,11 @@
             <div id="content-watch">
                 <h3>Trang chủ/ <?= $movie_title ?></h3>
                 <div class="view-watch">
-                    <iframe src="$video" frameborder="0"></iframe>
+                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/<?= $video ?>" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; 
+                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
                 </div>
                 <div class="comment-movie">
                     <h4>Bình luận</h4>
@@ -60,7 +64,7 @@
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
-                        echo "<h4>Có thể bạn quan tâm</h4>";
+                        echo "<h4>Phim nổi bật</h4>";
                         echo "<ul>";
 
                         while($row = mysqli_fetch_assoc($result)) 

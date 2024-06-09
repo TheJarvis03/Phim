@@ -3,7 +3,7 @@
 
 
 <div class="noidungtongquat">
-    <h1 style="margin-left: 33%; border: 1px; background-color: #778899; display: inline; padding: auto">Chọn gói dịch
+    <h1 style="margin-left: 37%; border: 1px; background-color: #778899; display: inline; padding: auto;">Chọn gói dịch
         vụ phù hợp với bạn</h1>
     <div class="TQ">
         <?php
@@ -26,17 +26,14 @@
                     <td><?php echo $row['gia']; ?>VND</td>
                 </tr>
                 <tr>
-                    <td>Thông tin gói:
-                        <?php 
-    $noi_dung = $row['noi_dung'];
-    if (strlen($noi_dung) > 50) {
-        echo substr($noi_dung, 0, 50) . '...';
-    } else {
-        echo $noi_dung;
-    }
-    ?>
+                    <td>Thông tin gói: </td>
+                </tr>
+                <tr>
+                    <td>
+                    <?php 
+                        echo $row['noi_dung'];
+                    ?>
                     </td>
-
                 </tr>
                 <tr>
                     <td><a href="trang_xac_nhan_goi_mua.php?goi_mua=<?php echo $row['id']; ?>">Mua gói</a></td>

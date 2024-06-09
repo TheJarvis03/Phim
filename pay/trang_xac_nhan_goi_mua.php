@@ -44,7 +44,7 @@ if (isset($_SESSION['email']) && isset($_GET['goi_mua'])) {
 
     <table>
         <tr>
-            <td>Tạm tính</td>
+            <td><h3 style="color: blue;">ĐƠN HÀNG CỦA BẠN<h3></td>
 
         </tr>
         <tr>
@@ -68,14 +68,14 @@ if (isset($_SESSION['email']) && isset($_GET['goi_mua'])) {
             <td><?php echo $so_tien;  ?> VND</td>
         </tr>
         <tr>
-            <td>Nội dung:</td>
+            <td>Thông tin gói:</td>
             <td><?php echo $noi_dung;  ?></td>
         </tr>
         <tr>
             <td>Thời gian:</td>
             <td>1 tháng bắt đầu khi thanh toán thành công</td>
         </tr>
-        <td>Tổng</td>
+        <td>Tổng:</td>
         <td><?php echo $so_tien;  ?> VND</td>
         </tr>
         <tr>

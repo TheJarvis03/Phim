@@ -47,7 +47,7 @@
                     <div class="dRight-movie">
                         <h4 class="movie"><?= $movie_title ?></h4>
                         <h5 class="movie2"><?= $movie ?></h5>
-                        <p class="evaluate">Đánh giá: <?= $rating ?> / 5</p>
+                        <p class="evaluate">Đánh giá: <?= $rating ?> / 100 Metacritic</p>
                         <p class="status">Trạng thái: <?= $status ?></p>
                         <p class="quality">Chất lượng: <?= $quality ?></p>
                         <p class="language">Ngôn ngữ: <?= $language ?></p>

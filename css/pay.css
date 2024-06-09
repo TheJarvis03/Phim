@@ -17,16 +17,15 @@
 }
 
 
-
-.T1 table {
+.T1 table{
     margin          : 0 auto;
-    padding         : 10px;
+    padding         : 20px;
     border-radius   : 20px;
     box-shadow      : 0 2px 5px rgba(0, 0, 0, 0.1);
     border          : 1px solid #C9E4D6;
     border-width    : 10px;
     box-shadow      : #ccc;
-    background-color: #F19373;
+    background-color: rgb(243, 153, 50);
     height          : 40%;
     color           : white;
     white-space     : nowrap;
@@ -36,7 +35,6 @@
     width           : 400px;
 
 }
-
 
 .ck table {
     border          : 1px;
@@ -58,7 +56,7 @@
     border          : 1px solid black;
     padding         : 20px;
     color           : black;
-    background-color: #AFD788;
+    background-color: #ccc;;
     margin-left     : 350px;
     margin-top      : 20px;
     margin-bottom   : 20px;
@@ -71,7 +69,7 @@
     border          : 1px solid burlywood;
     background-color: rgb(232, 233, 224);
     text-decoration : none;
-    padding         : 5px;
+    padding         : 2px;
 }
 
 .ck table a {
@@ -80,7 +78,7 @@
     border          : 1px solid burlywood;
     background-color: rgb(13, 129, 81);
     text-decoration : none;
-    padding         : 3px;
+    padding         : 2px;
 }
 
 .order-item table a {
@@ -89,5 +87,5 @@
     border          : 1px solid burlywood;
     background-color: rgb(232, 233, 224);
     text-decoration : none;
-    padding         : 3px;
+    padding         : 2px;
 }

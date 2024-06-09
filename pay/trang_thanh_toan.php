@@ -21,15 +21,15 @@
             <div style="margin-left: 300px; color: black" class="ck">
                 <table>
                     <tr>
-                        <td style= "background-color: #1d849e; color: white;display: inline-block; padding: 5px;"><h3>Mã QR chuyển khoản</h3></td>
+                        <td style= "background-color: #1d849e; color: white;display: inline-block; padding: 5px;  margin-left: 10px;"><h3>Mã QR chuyển khoản</h3></td>
                     </tr>
                     <tr>
                         <td> <img style="display: flex;
                                             justify-content: space-between;
                                             padding: 12 50px;
                                             height: 150px;
-                                            width: 220px;
-                                            margin-left: 100px;" src="../img/QR.jfif" alt=""> </td>
+                                            width: 200px;
+                                            margin-left: 120px;" src="../img/QR.jfif" alt=""> </td>
                     </tr>
                     <tr>
                         <td>Thông tin chuyển khoản</td>
