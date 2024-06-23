@@ -44,7 +44,12 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="../login-register/trang_dang_ky_dang_nhap.php">Đăng nhập</a></li>
+                        <?php if (isset($_SESSION['email'])){ ?>
+                            <li><a href="../account/account.php">Xem tài khoản</a></li>
+                            <li><a href="../login-register/dang_xuat.php">Đăng xuất</a></li>
+                        <?php  }else{ ?>
+                            <li><a href="../login-register/trang_dang_ky_dang_nhap.php">Đăng ký / Đăng nhập</a></li>
+                        <?php } ?>
                         <li><a href="../pay/trang_xem_cac_goi.php">Mua gói</a></li>
                     </ul>
                 </div>
