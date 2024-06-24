@@ -113,7 +113,7 @@
             <h3>PHIM BỘ MỚI CẬP NHẬT</h3>
             <div class="tphim3">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Quocgia='Mỹ' LIMIT 5";
+                    $sql = "SELECT * FROM content WHERE Namsx='2021' LIMIT 5";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
@@ -156,7 +156,7 @@
             <h3>PHIM CHIẾU RẠP</h3>
             <div class="tphim5">
                 <?php
-                    $sql = "SELECT * FROM content WHERE Namsx= 2023 LIMIT 5";
+                    $sql = "SELECT * FROM content WHERE Namsx= 2024 LIMIT 5";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
@@ -178,7 +178,7 @@
         <div id="sidebar">
             <h3>PHIM HOT</h3>
             <?php
-                    $sql = "SELECT * FROM content LIMIT 11";
+                    $sql = "SELECT * FROM content WHERE Namsx= 2023 OR Namsx= 2024 LIMIT 11";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) 
                     {
