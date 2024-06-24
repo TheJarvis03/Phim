@@ -36,7 +36,7 @@
                 function showMoviesWithPagination($sql, $limit = 12, $currentPage = 1) {
                     global $conn;
 
-                    // Tính tổng số phim
+                    // Tính tổng số trang
                     $resultTotal = $conn->query($sql);
                     $totalMovies = $resultTotal->num_rows;
                     $totalPages = ceil($totalMovies / $limit);
