@@ -21,7 +21,7 @@
             <div id="content-watch">
                 <h3>Trang chủ/ <?= $movie_title ?></h3>
                 <div class="view-watch">
-                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/<?= $video ?>" title="YouTube video player" 
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/<?= $video ?>" title="YouTube video player" 
                         frameborder="0" allow="accelerometer; 
                         autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
