@@ -250,10 +250,10 @@ CREATE TABLE `goi_thanh_vien` (
 --
 
 INSERT INTO `goi_thanh_vien` (`id`, `ten`, `gia`, `noi_dung`) VALUES
-(1, 'VIP 3', 260000, 'Chất lượng:\r\nTốt nhất\r\n+ Độ phân giải:\r\n4K (Ultra HD)'),
-(2, 'VIP 2', 220000, 'Chất lượng:\r\nTuyệt vời\r\n+ Độ phân giải:\r\n1080p (Full HD)'),
-(3, 'VIP 1', 108000, 'Chất lượng:\r\nTốt\r\n+ Độ phân giải:\r\n720p (HD)'),
-(4, 'VIP 0', 70000, 'Chất lượng:\r\nKhá\r\n+ Độ phân giải:\r\n480p');
+(1, 'VIP 1', 70000, 'Chất lượng:\nKhá\n+ Độ phân giải:\n480p                '),
+(2, 'VIP 2', 108000, 'Chất lượng:\nCơ bản\n+ Độ phân giải:\n720p'),
+(3, 'VIP 3', 220000, 'Chất lượng:\nTiêu chuẩn\n+ Độ phân giải:\n1080p'),
+(4, 'VIP 4', 260000, 'Chất lượng:\nCao cấp\n+ Độ phân giải:4K + HDR');
 
 -- --------------------------------------------------------
 

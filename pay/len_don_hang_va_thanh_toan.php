@@ -1,8 +1,7 @@
 <?php
 session_start();
 include('../config/connect.php');
-echo $_SESSION['email'];
-echo $_GET['goi_mua'];
+
 if (isset($_SESSION['email']) && isset($_GET['goi_mua'])) {
     $s_email = $_SESSION['email'];
     // nếu có session email thì lấy thông tin người dùng
@@ -23,7 +22,7 @@ if (isset($_SESSION['email']) && isset($_GET['goi_mua'])) {
     if (mysqli_num_rows($kq_get_thong_tin) > 0) {
         while ($row = mysqli_fetch_assoc($kq_get_thong_tin)) {
             $id_goi = $row["id"];
-            $so_tien = $row["gia"];;
+            $so_tien = $row["gia"];
         }
     } else {
         // loi
