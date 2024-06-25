@@ -27,7 +27,7 @@
                         <ul>
                             <li>Thông tin</li>
                             <li><a href="#">Giới thiệu</a></li>
-                            <li><a href="#">Liên hệ với chúng tôi</a></li>
+                            <li><a href="https://www.facebook.com/cong.chill.0212">Liên hệ với chúng tôi</a></li>
                             <li><a href="#">Điều khoản sử dụng</a></li>
                             <li><a href="#">Chính sách riêng tư</a></li>
                         </ul>
